@@ -1,0 +1,6 @@
+.table-row {
+  background-color: rgb(199, 240, 253);
+  /* border-right: 1px solid whitesmoke;
+  border-bottom: 2px solid white; */
+  cursor: pointer;
+}
