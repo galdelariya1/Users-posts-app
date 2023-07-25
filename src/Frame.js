@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 const Frame = () => {
   return (
     <>
-      <Typography sx={{ m: 5 }} variant="h2">
+      <Typography sx={{ m: 4 }} variant="h2">
         Users And Posts App
       </Typography>
       <Box
