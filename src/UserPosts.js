@@ -26,7 +26,7 @@ const UserPosts = () => {
   }, []);
 
   const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value); // Update the searchQuery state with the current value of the input
+    setSearchQuery(event.target.value);
   };
 
   const filteredPosts = posts.filter((post) =>
