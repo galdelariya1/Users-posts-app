@@ -52,7 +52,7 @@ const UsersTable = () => {
     navigate(`/posts/${userId}`);
   };
 
-  const getRowClassName = (params) => {
+  const getRowClassName = () => {
     return "table-row";
   };
 
