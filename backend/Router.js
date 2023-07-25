@@ -14,8 +14,11 @@ router.route("/users").get(async (req, res) => {
 });
 
 router.route("/posts/:id").get(async (req, res) => {
+  const userId = req.params.id;
+  const page = req.query.page ? parseInt(req.query.page) : 1;
+  const pageSize = req.query.pageSize ? parseInt(req.query.pageSize) : 10;
   try {
-    const data = await getUserPosts(req.params.id);
+    const data = await getUserPosts(userId, page, pageSize);
     return res.json(data);
   } catch (error) {
     console.error("Error:", error);

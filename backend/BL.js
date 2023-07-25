@@ -16,15 +16,17 @@ const getAllUsers = async () => {
   }
 };
 
-const getUserPosts = async (userId) => {
+const getUserPosts = async (userId, page, pageSize) => {
   try {
+    const offset = (page - 1) * pageSize;
     const [row] = await pool.query(
       `
     SELECT *
     FROM users
     WHERE userId = ?
+    LIMIT ?, ?
     `,
-      [userId]
+      [userId, offset, pageSize]
     );
     if (row.length !== 0) return row;
     else {
